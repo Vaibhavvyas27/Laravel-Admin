@@ -66,6 +66,10 @@
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
 
+        {{-- Font Awsomes --}}
+
+        <script src="https://kit.fontawesome.com/93534b4b07.js" crossorigin="anonymous"></script>
+
         @livewireScripts
     </body>
 </html>

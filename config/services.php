@@ -14,6 +14,18 @@ return [
     |
     */
 
+    'google' => [
+        'client_id' => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'redirect' => 'http://127.0.0.1:8000/Google/callback',
+
+    ],
+    'facebook' => [
+        'client_id' => '3554188528243590',
+        'client_secret' => '20a96109bd7daaef8d71789f444d91f1',
+        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+
+    ],
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),

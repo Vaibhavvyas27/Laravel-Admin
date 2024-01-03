@@ -343,12 +343,16 @@ h6 {
 .nav-tabs-bordered .nav-link:hover,
 .nav-tabs-bordered .nav-link:focus {
   color: #4154f1;
+  border-color: white !important;
+  border-bottom-color: lightgray !important;
 }
 
 .nav-tabs-bordered .nav-link.active {
   background-color: #fff;
-  color: #4154f1;
-  border-bottom: 2px solid #4154f1;
+  color: #4154f1 !important;
+  border: none !important;
+  border-bottom: 2px solid #4154f1 !important;
+  
 }
 
 /*--------------------------------------------------------------
@@ -684,11 +688,15 @@ h6 {
   align-items: center;
   font-size: 15px;
   font-weight: 600;
-  color: #4154f1;
+  color: #012970;
   transition: 0.3;
-  background: #f6f9ff;
+  background: #fff;
   padding: 10px 15px;
   border-radius: 4px;
+}
+.sidebar-nav .nav-link.active{
+  color: #4154f1;
+  background: #f6f9ff;
 }
 
 .sidebar-nav .nav-link i {
@@ -1230,4 +1238,11 @@ h6 {
   text-align: center;
   font-size: 13px;
   color: #012970;
+}
+
+/* Data Table Sector link */
+
+
+select.datatable-selector {
+  width: 40% !important;
 }

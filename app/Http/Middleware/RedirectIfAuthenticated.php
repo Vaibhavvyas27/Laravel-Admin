@@ -21,8 +21,15 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                // echo Auth::user()->roles->pluck('name');
+                if(!empty(Auth::user()->roles[0]) && (Auth::user()->roles->pluck('name')[0]=='SuperAdmin' || Auth::user()->roles->pluck('name')[0]=='Admin')){
+                    return redirect(RouteServiceProvider::HOME);
+                }
+                else{
+                    return redirect()->route('trip.index');
+                }                
             }
+            
         }
 
         return $next($request);
